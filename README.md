@@ -115,4 +115,4 @@ This idea is a really cool idea, if we want to define a function only_positive t
 `val all_positive = filter (fn x => x > 0)` now when we call the function with a list ls, it's like calling 
 `filter (fn x=> x > 0) ls`. notice the filter funtion uses currying.
 
-#### Unecessary rapping 
+#### Unecessary wrapping 
