@@ -59,7 +59,7 @@ there is a possibility that we will call the thunk several times, now we will ev
 multiple times, and that's worse than a normal function (evaluate e only once).
 
 Delay and Force, is the idea of delaying evaluation, but also remembering the result of evaluating e.
-The delay function would return a mutable pair `(mcons #f thunk)` the thunk hold the expression e 
+The delay function would return a mutable pair `(mcons #f thunk)` the thunk holds the expression e 
 and this pair is passed to the function instead of passing e. The force function when called for the first 
 time will call the thunk, and remembers the result, the pair becomes `(mcons #t result)`. 
 the algorithm is something like this:
@@ -82,7 +82,7 @@ Note: without returning a thunk it's an infinite loop.
 ### Memoization
 
 The memoization is a way to avoid duplicate calculations, by storing the results of previous function calls,
-for example, in the famous Fibonacci algorithm, to calculate fib(n) we have to call fib(n-1) and fib(n-2) recursively, so fib(5) will call fib(4) and fib(3), and then fib(4) will call fib(3) also, with bigger numbers these duplications are catastrophique, so if we store the result of fib(3) we can use it again instantly and this is the memoization.
+for example, in the famous Fibonacci algorithm, to calculate fib(n) we have to call fib(n-1) and fib(n-2) recursively, so fib(5) will call fib(4) and fib(3), and then fib(4) will call fib(3) also, with bigger numbers these duplications are catastrophic, so if we store the result of fib(3) we can use it again instantly and this is the memoization.
 
 ### Macros 
 
