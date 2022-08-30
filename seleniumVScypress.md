@@ -20,6 +20,7 @@ __*** from cypress docs ***__
 Selenium supports bigger number of web browsers
 
 Selenium: Chrome, IE, Safari, Edge, Firefox, Opera
+
 Cypress: Chrome, Edge, Firefox, Electron
 
 ## Programming languages
@@ -38,7 +39,9 @@ selenium we have to set up the environment and download browser-specific drivers
 ## Documentation 
 
 both selenium and cypress have a nice documentation
+
 selenium: https://www.selenium.dev/documentation/webdriver/
+
 cypress:  https://docs.cypress.io/
 
 
