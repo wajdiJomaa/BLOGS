@@ -159,8 +159,8 @@ Both Cypress and Selenium are very powerful tools for ui automation testing, alm
 could be implemented in both frameworks, but it's possible that the implementation of some cases is possible in only one of these two. depending on what you have use selenium and cypress.
 
 
-|   Cypress     |     Selenium      |    
-|:-------------:|:------------------|  
+|   Cypress     |       Selenium     |    
+|:-------------:|:------------------:|  
 | login without interacting with UI by sending post request then storing session id in the browser storage | login requires interacting with the UI|
 | only css selectors | requires using the xpath to locate some elements
 | clicking hidden elements is a magical feature                                                                         | clicking hidden elements is not possible which make the automation of some tests almost impossible 
