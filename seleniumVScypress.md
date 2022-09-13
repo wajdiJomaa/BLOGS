@@ -158,4 +158,15 @@ Selenium:
 Both Cypress and Selenium are very powerful tools for ui automation testing, almost every test case
 could be implemented in both frameworks, but it's possible that the implementation of some cases is possible in only one of these two. depending on what you have use selenium and cypress.
 
+
+|   Cypress     |     Selenium      |    
+|:-------------:|:------------------|  
+| login without interacting with UI by sending post request then storing session id in the browser storage | login requires interacting with the UI|
+| only css selectors | requires using the xpath to locate some elements
+| clicking hidden elements is a magical feature                                                                         | clicking hidden elements is not possible which make the automation of some tests almost impossible 
+| asynchronous, sometimes makes using loops, if.. statements a little bit more complicated                              | runs synchronously                                                                                 
+| recording videos is a built-in feature                                                                                | not a built-in feature                                                                              
+| the test runner makes debugging much easier,  and helps to check the integrity of the test (shows all the test steps) | debugging much harder
+
+
 ## Date: 30/9/2022
