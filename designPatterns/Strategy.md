@@ -38,8 +38,7 @@ public class shotgun{
     }
 }
 ```
-
-now we have these two classes but how we can modify the fighter class to get a weapon, shotgun and riffle don't share the same type so we don't have a clear way to implement the weapon, also you could notice that the shotgun and riffle has a lot of things in common, so we can instead use an interface called weapon
+we have these two classes but how we can modify the fighter class to get a weapon? notice that the shotgun and riffle has all methods in common, so we can use an interface called Weapon and let every type of weapon inherit from this interface
 
 ```java
 public interface Weapon{
@@ -53,10 +52,8 @@ public class riffle implements Weapon{
 
 /// same for shotgun
 ```
-
-now both riffle and shotgun share the same type we can also add weapons as much as we want 
-we can add for example a Hand class for players with no weapons. to add a weapon to the fighter class
-we have to compose the class with an object of type Weapon
+now both riffle and shotgun share the same interface, so will use composition to compose the Fighter class
+with a Weapon
 
 ```java     
 abstract class  Fighter{
@@ -74,6 +71,10 @@ abstract class  Fighter{
 }
 ```
 
+this way the Fighter class could have any type of weapon, the fighter doesn't care about which concrete weapon he has, but he just has to know that the weapon interface has a fire mehtod and he will call the method
+
+we can also extend our code to add as many weapons as we want without having to change the fighter class
+
 it looks that we have finished, every player could choose any type of weapon, but still a small trick to let the player update the weapon at runtime 
 
 ```java
@@ -82,9 +83,12 @@ public void setWeapon(Weapon weapon){
     this.weapon = weapon;
 }
 ```
+now, all types of weapons are interchangable between each others and we have a setter method to change the type at runtime
+
 Great Job, you have implemented a scalable design meeting the requirements of the game, maybe you'll get a promotion at GameCo.
 
-## The strategy pattern definition
+## The strategy pattern defined
+
 The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
 
 That's exactly what we have applied in our code we created a set of algorithmes for each type of weapon, and made them interchangle by implementing the weapon interface, and the client or the fighter don't know anything about our weapon classes, it just holds an instance of the weapon interface, and call its methods
